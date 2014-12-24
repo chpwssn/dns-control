@@ -39,7 +39,7 @@ class DNS {
         $sprocess = $this->db->quote($process);
         $now = time();
         $result = $this->db->getRow("SELECT lockid, timestamp FROM locks WHERE process = $sprocess AND timestamp > $now");
-        if($result['lockid']) {
+        if($result) {
             return true;
         }
         else {
