@@ -4,7 +4,7 @@ The backend directory has the command scripts. You want these in a directory not
 Web setup:
 1) Create a mysql database
 2) Create a mysql user
-3) import the dump: mysql dns < frontend/sql/dump.sql
+3) import the dump: mysql dns < frontend/sql/dns.sql
 4) Create Admin, Run this sql query
         INSERT INTO `admins` ( `userid` , `username` , `password` ) VALUES ( '', 'ADMIN_USERNAME', MD5( 'YOUR_PASSWORD' ));
 

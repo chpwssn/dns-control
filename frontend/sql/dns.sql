@@ -25,7 +25,7 @@ CREATE TABLE add_queue (
   PRIMARY KEY  (queueid),
   KEY domain (domain,address),
   KEY completed (completed)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -39,7 +39,7 @@ CREATE TABLE admins (
   `password` varchar(32) NOT NULL default '',
   PRIMARY KEY  (userid),
   KEY username (username,`password`)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE del_queue (
   PRIMARY KEY  (queueid),
   KEY domainid (domainid),
   KEY completed (completed)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -69,7 +69,7 @@ CREATE TABLE domains (
   `password` varchar(50) NOT NULL default '',
   PRIMARY KEY  (domainid),
   KEY domain (domain,`password`)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `locks` (
   `timestamp` int(11) NOT NULL default '0',
   PRIMARY KEY  (lockid),
   KEY `process` (`process`,`timestamp`)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -99,7 +99,7 @@ CREATE TABLE mod_queue (
   PRIMARY KEY  (queueid),
   KEY domainid (domainid,completed),
   KEY `timestamp` (`timestamp`)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -115,7 +115,7 @@ CREATE TABLE records_a (
   PRIMARY KEY  (recordid),
   KEY domainid (domainid,name),
   KEY ip (address)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -131,7 +131,7 @@ CREATE TABLE records_cname (
   PRIMARY KEY  (recordid),
   KEY domainid (domainid,name),
   KEY address (address)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -148,7 +148,7 @@ CREATE TABLE records_mx (
   KEY domainid (domainid),
   KEY address (address),
   KEY priority (priority)
-) TYPE=MyISAM;
+) ;
 
 -- --------------------------------------------------------
 
@@ -163,4 +163,4 @@ CREATE TABLE sessions (
   `data` longtext,
   PRIMARY KEY  (sesskey),
   KEY expiry (expiry)
-) TYPE=MyISAM;
+) ;
