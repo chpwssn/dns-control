@@ -1,4 +1,4 @@
-<?
+<?php
 /* $Id: dns.inc.php 66 2005-02-26 20:01:51Z justin $ */
 
 class DNS {
