@@ -24,7 +24,7 @@ class DNS {
                 $this->raiseError("Domain exists or is in the queue to be created\n");
                 return false;
             }
-            $sql = sprintf("INSERT INTO add_queue (domain, address, password) VALUES (%s, %s, %s)",
+            $sql = sprintf("INSERT INTO add_queue (domain, address, password) VALUES (%s, %s, md5(%s))",
                             $this->db->quote($domain), $this->db->quote($address),  $this->db->quote($password));
             $this->db->Execute($sql);
             return true;
@@ -277,7 +277,7 @@ class DNS {
     function updateZonePass($domainid, $password) {
         $domainid = $this->db->quote($domainid);
         $password = $this->db->quote($password);
-        $this->db->Execute("UPDATE domains SET password = $password WHERE domainid = $domainid");
+        $this->db->Execute("UPDATE domains SET password = md5($password) WHERE domainid = $domainid");
         return true;
     }
 
