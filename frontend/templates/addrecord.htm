@@ -59,6 +59,38 @@ class="contentBGNewsMainTD"> <br>
               <tr>
                 <td bgcolor="whitesmoke" colspan="2"><p><b>
                     <center>
+                      <b>AAAA Record</b>
+                    </center>
+                </b></p></td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" colspan="2">
+                      <form name="addrecord" method="post" action="addrecord.php">
+                        <input type="hidden" name="type" value="aaaa">
+                        <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="53%">Name of Record (ex: www)</td>
+                            <td width="47%">Address (IP of your server)</td>
+                          </tr>
+                          <tr>
+                            <td><input name="name" type="text" size="22"></td>
+                            <td><input name="address" type="text" size="45" value="<{$ip}>"></td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td><div align="right">
+                              <input type="submit" name="Submit" value="Submit">
+                            </div></td>
+                          </tr>
+                        </table>
+                      </form>
+                </div></td>
+            </table>
+			<br>
+			<table width="50%" border="0" cellspacing="1" cellpadding="2" bgcolor="#dcdcdc" align="center" >
+              <tr>
+                <td bgcolor="whitesmoke" colspan="2"><p><b>
+                    <center>
                       <b>CNAME Record</b>
                     </center>
                 </b></p></td>

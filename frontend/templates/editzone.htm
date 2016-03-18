@@ -31,16 +31,16 @@ class="contentBGNewsMainTD"> <br>
                         <input type="hidden" name="recordid" value="<{$smarty.request.recordid}>">
                         <table width="100%"  border="0" cellspacing="0" cellpadding="0">
                           <tr>
-                            <td width="53%">Name or Priority</td>
-                            <td width="47%">Address</td>
+                            <td width="40%">Name or Priority</td>
+                            <td width="60%">Address</td>
                           </tr>
                           <tr>
                             <{if $smarty.request.type eq 'mx'}>
                             <td bgcolor="whitesmoke"><input name="address[name]" size="3" value="<{$name}>"></td>
-                            <td><input name="address[address]" type="text" size="22" value="<{$ip}>"></td>
+                            <td><input name="address[address]" type="text" size="45" value="<{$ip}>"></td>
                             <{else}>
                             <td bgcolor="whitesmoke"><{$name}></td>
-                            <td><input name="address[address]" type="text" size="22" value="<{$ip}>"></td>
+                            <td><input name="address[address]" type="text" size="45" value="<{$ip}>"></td>
                             <{/if}>
                           </tr>
                           <tr>

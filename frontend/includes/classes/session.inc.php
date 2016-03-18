@@ -24,7 +24,7 @@ class Session {
             return true;
         } 
         else {
-            $sql = sprintf("SELECT domainid FROM domains WHERE domain = %s AND password = %s", 
+            $sql = sprintf("SELECT domainid FROM domains WHERE domain = %s AND password = md5(%s)", 
                            $this->db->quote($this->username), $this->db->quote($this->password));
             $this->userid = $this->db->getOne($sql);
             if(!empty($this->userid)) {

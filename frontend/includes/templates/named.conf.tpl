@@ -1,4 +1,0 @@
-options {
-    directory "/var/named";
-};
-

@@ -49,6 +49,19 @@ class="contentBGNewsMainTD"> <br>
                 <td><a href="modrecord.php?act=del&type=a&recordid=<{$records_a[a].recordid}>" onClick="return delrecord('<{$records_a[a].name}>')">Delete</a></td>
               </tr>
             <{/section}>
+           <tr><td><br></td></tr>
+              <tr>
+                <td colspan="2">AAAA RECORDS </td>
+                </tr>
+            <tr><td><br></td></tr>
+            <{section name=a loop=$records_aaaa}>
+              <tr bgcolor="<{cycle name=a values="whitesmoke,#ffffff"}>">
+                <td><{$records_aaaa[a].name}></td>
+                <td><{$records_aaaa[a].address}></td>
+                <td><a href="modrecord.php?act=edit&type=aaaa&recordid=<{$records_aaaa[a].recordid}>">Edit</a></td>
+                <td><a href="modrecord.php?act=del&type=aaaa&recordid=<{$records_aaaa[a].recordid}>" onClick="return delrecord('<{$records_a[a].name}>')">Delete</a></td>
+              </tr>
+            <{/section}>
             <tr><td><br></td></tr>
               <tr>
                 <td colspan="2">CNAME RECORDS </td>
